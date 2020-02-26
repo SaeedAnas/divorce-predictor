@@ -36,10 +36,10 @@ with open('questions.json', 'w') as outfile:
     json.dump(data, outfile)
 
 
-with open('questions.json') as json_file:
-    data = json.load(json_file)
+# with open('questions.json') as json_file:
+#     data = json.load(json_file)
 
-questions = data['questions']
-for question in questions:
-    print(question.get('question'))
-#print(questions)
+# questions = data['questions']
+# for question in questions:
+#     print(question.get('question'))
+# print(questions)

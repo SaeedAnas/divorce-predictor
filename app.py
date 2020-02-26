@@ -16,17 +16,17 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    form_answers = request.form
+    form_answers = request.form.to_dict()
     final_features = [[]];
-    for answer in form_answers:
-        final_features[0].append(answer[1])
+    for key, value in form_answers.items():
+        final_features[0].append(value)
     prediction = model.predict(final_features)
     if prediction == [1]: 
-       output = 'You\'re not divorced'
+       output = "You're not divorced"
     else:
         output = 'You will be divorced'
 
-    return render_template('answer.html', answer=output)
+    return render_template('answer.html', answer=output, prediction=prediction, answers=final_features)
 
 def createForm():
     with open('data/questions.json') as json_file:
