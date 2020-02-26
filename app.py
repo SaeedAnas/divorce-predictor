@@ -39,19 +39,19 @@ def createForm():
         form += f""" <div class = "question-holder">
                 <p>{id}. {q}</p>
 
-                <input type = "radio" id="strongly-disagree-{id}" name="q{id}" value="0">
+                <input type = "radio" id="strongly-disagree-{id}" name="q{id}" value="0" required>
                 <label for="strongly-disagree-{id}">Strongly Disagree</label>
 
-                <input type = "radio" id="disagree-{id}" name="q{id}" value="1">
+                <input type = "radio" id="disagree-{id}" name="q{id}" value="1" required>
                 <label for="disagree-{id}">Disagree</label>
 
-                <input type = "radio" id="uncertain-${id}" name="q{id}" value="2">
+                <input type = "radio" id="uncertain-${id}" name="q{id}" value="2" required>
                 <label for="uncertain-{id}">Uncertain</label>
 
-                <input type = "radio" id="agree-{id}" name="q{id}" value="3">
+                <input type = "radio" id="agree-{id}" name="q{id}" value="3" required>
                 <label for="agree-{id}">Agree</label>
 
-                <input type = "radio" id="strongly-agree-{id}" name="q{id}" value="4">
+                <input type = "radio" id="strongly-agree-{id}" name="q{id}" value="4" required>
                 <label for="strongly-agree-{id}">Strongly Agree</label>
             </div>"""
     return form
