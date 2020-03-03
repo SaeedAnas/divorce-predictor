@@ -22,9 +22,9 @@ def predict():
         final_features[0].append(value)
     prediction = model.predict(final_features)
     if prediction == [1]: 
-       output = "You're not divorced"
+       output = 'Your love is eternal!'
     else:
-        output = 'You will be divorced'
+        output = 'You are doomed to divorce...'
 
     return render_template('answer.html', answer=output, prediction=prediction, answers=final_features)
 

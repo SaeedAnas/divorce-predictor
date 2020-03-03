@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predict Divorce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">    <title>Predict Divorce</title>
 </head>
 <body>
     <div class = "form">
+        <h1>Divorce Predictor</h1>
+        <h2>Model to predict whether or not you will be divorced with your loved one.</h2>
+        <p class = "directions">Directions: Answer the following statements to the best of your ability.</p>
         <form action="{{ url_for('predict')}}" method = "post">
            {{ form | safe }}
            <button type = "submit">Predict</button>
